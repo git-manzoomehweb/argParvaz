@@ -1,0 +1,18 @@
+{
+  "name": "1404-10-16---design",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:mobile": "npx tailwindcss -c tailwind.config.mobile.js -i ./mobile/assets/css/input.css -o ./mobile/assets/css/argeparvaz.ui.mob.min.css --watch",
+    "watch:web": "npx tailwindcss -c tailwind.config.web.js -i ./web/assets/css/input.css -o ./web/assets/css/argeparvaz.ui.min.css --watch",
+    "watch:common": "npx tailwindcss -c tailwind.config.common.js -i ./common/assets/css/input.css -o ./common/assets/css/customized.ui.min.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -1,0 +1,108 @@
+<basis core="group" if="'[##cms.query.typecat##]'='tour'">
+    <basis core="dbsource" source="basiscore" mid="20" name="tour" lid="1">
+        <member name="category" type="tree" request="cat" parentid="[##cms.query.catid##]"></member>
+    </basis>
+    <div class="sub-item-megamenu pr-8 border-r border-primary-300">
+        <basis core="print" datamembername="tour.category">
+            <face filter="catid in('[##cms.query.catid##]') and link is null"><a
+                    href="/tour-list.bc?catid=[##cms.query.catid##]"
+                    class="font-danademibold text-lg text-black hover:text-primary-900">@title</a>
+                <h2 class="line-clamp-3 leading-5 text-sm text-black ">@urldescription</h2>
+            </face>
+            <face filter="catid in('[##cms.query.catid##]')"><a href="/@link"
+                    class="font-danademibold text-lg text-black hover:text-primary-900">@title</a>
+                <h2 class="line-clamp-3 leading-5 text-sm text-black ">@urldescription</h2>
+            </face>
+        </basis>
+        <basis core="tree" datamembername="tour.category" idcol="catid" parentidcol="parentid"
+            nullvalue="[##cms.query.catid##]">
+            <layout>
+                <div>
+                    <ul
+                        class="text-sm text-primary-500 font-danaregular leading-8 mt-14 columns-3 w-[373px] max-lg:columns-1 max-lg:w-full">
+                        @child </ul>
+                </div>
+            </layout><else-layout><a href="/tour-list.bc?catid=[##cms.query.catid##]"
+                    class="font-danademibold text-lg text-black hover:text-primary-900">[##cms.query.catname##]</a>
+                <div class="text-sm text-primary-500 font-danaregular leading-8 mt-14 w-[373px]">در حال حاضر دسته ای
+                    یافت نشد. </div>
+            </else-layout>
+            <face filter="parentid=[##cms.query.catid##] and link is null">
+                <li class="hover:text-primary-500"><a href="/tour-list.bc?catid=@catid">@title</a></li>
+            </face>
+            <face filter="parentid=[##cms.query.catid##] ">
+                <li class="hover:text-primary-500"><a href="/@link">@title</a></li>
+            </face>
+        </basis>
+    </div>
+    <basis core="print" datamembername="tour.category">
+        <layout>@child </layout><else-layout>
+            <figure
+                class="image-category-magamenu max-lg:hidden w-[308px] h-[402px] min-w-[308px] min-h-[402px] max-w-[308px] max-h-[402px] rounded-[10px] overflow-hidden">
+                <img loading="lazy" class="w-[308px] h-[402px] min-w-[308px] min-h-[402px] max-w-[308px] max-h-[402px]"
+                    src="[##cms.cms.cdn##]/images/tour-banner-default.jpg" width="308" height="402" alt="تور" />
+            </figure>
+        </else-layout>
+        <face filter="catid in('[##cms.query.catid##]')">
+            <figure
+                class="image-category-magamenu max-lg:hidden w-[308px] h-[402px] min-w-[308px] min-h-[402px] max-w-[308px] max-h-[402px] rounded-[10px] overflow-hidden">
+                <img loading="lazy" class="w-[308px] h-[402px] min-w-[308px] min-h-[402px] max-w-[308px] max-h-[402px]"
+                    src="[##cms.cms.cdn##]/@image" width="308" height="402" alt="@title" />
+            </figure>
+        </face>
+    </basis>
+</basis>
+<basis core="group" if="'[##cms.query.typecat##]'='article'">
+    <basis core="dbsource" source="basiscore" mid="1" name="article" lid="1">
+        <member name="category" type="tree" request="cat" parentid="[##cms.query.catid##]"></member>
+    </basis>
+    <div class="sub-item-megamenu pr-8 border-r border-primary-300">
+        <basis core="print" datamembername="article.category">
+            <face filter="catid in('[##cms.query.catid##]') and link is null"><a
+                    href="/article-list.bc?catid=[##cms.query.catid##]"
+                    class="font-danademibold text-lg text-black hover:text-primary-900">@title</a>
+                <h2 class="line-clamp-3 leading-5 text-sm text-black">@urldescription</h2>
+            </face>
+            <face filter="catid in('[##cms.query.catid##]')"><a href="/@link"
+                    class="font-danademibold text-lg text-black hover:text-primary-900">@title</a>
+                <h2 class="line-clamp-3 leading-5 text-sm text-black">@urldescription</h2>
+            </face>
+        </basis>
+        <basis core="tree" datamembername="article.category" idcol="catid" parentidcol="parentid"
+            nullvalue="[##cms.query.catid##]">
+            <layout>
+                <div>
+                    <ul
+                        class="text-sm text-primary-500 font-danaregular leading-8 mt-14 columns-3 w-[373px] max-lg:columns-1 max-lg:w-full">
+                        @child </ul>
+                </div>
+            </layout><else-layout><a href="/article-list.bc?catid=[##cms.query.catid##]"
+                    class="font-danademibold text-lg text-black hover:text-primary-900">[##cms.query.catname##]</a>
+                <div class="text-sm text-primary-500 font-danaregular leading-8 mt-14 w-[373px]">در حال حاضر دسته ای
+                    یافت نشد. </div>
+            </else-layout>
+            <face filter="parentid=[##cms.query.catid##] and link is null">
+                <li class="hover:text-primary-500"><a href="/article-list.bc?catid=@catid">@title</a></li>
+            </face>
+            <face filter="parentid=[##cms.query.catid##] ">
+                <li class="hover:text-primary-500"><a href="/@link">@title</a></li>
+            </face>
+        </basis>
+    </div>
+    <basis core="print" datamembername="article.category">
+        <layout>@child </layout><else-layout>
+            <figure
+                class="image-category-magamenu max-lg:hidden w-[308px] h-[402px] min-w-[308px] min-h-[402px] max-w-[308px] max-h-[402px] rounded-[10px] overflow-hidden">
+                <img loading="lazy" class="w-[308px] h-[402px] min-w-[308px] min-h-[402px] max-w-[308px] max-h-[402px]"
+                    src="[##cms.cms.cdn##]/images/article-banner-default.jpg" width="308" height="402" alt="مقاله" />
+            </figure>
+        </else-layout>
+        <face filter="catid in('[##cms.query.catid##]')">
+            <figure
+                class="image-category-magamenu max-lg:hidden w-[308px] h-[402px] min-w-[308px] min-h-[402px] max-w-[308px] max-h-[402px] rounded-[10px] overflow-hidden">
+                <img loading="lazy" class="w-[308px] h-[402px] min-w-[308px] min-h-[402px] max-w-[308px] max-h-[402px]"
+                    src="[##cms.cms.cdn##]/@image" width="308" height="402" alt="@title" />
+            </figure>
+        </face>
+    </basis>
+</basis>

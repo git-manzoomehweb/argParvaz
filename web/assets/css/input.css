@@ -1,0 +1,333 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+table {
+  text-indent: initial;
+  border-color: initial;
+  border-collapse: unset;
+}
+
+.dir-rtl {
+  direction: rtl;
+}
+.dir-ltr {
+  direction: ltr;
+}
+:root {
+  --primary: #a90730; /* base */
+  --primary-50: #fbeaef;
+  --primary-100: #f6cad6;
+  --primary-200: #e395a2;
+  --primary-300: #d66c7e;
+  --primary-400: #e14861;
+  --primary-500: #e7304c;
+  --primary-600: #d72849;
+  --primary-700: #c51e42;
+  --primary-800: #b8173b;
+  --primary-900: #a90730;
+  --primary-950: #960429;
+
+  /* ===================== *
+   * Secondary-1 (orange)
+   * ===================== */
+  --secondary: #f6931f; /* base */
+  --secondary-50: #fef2e1;
+  --secondary-100: #fddeb4;
+  --secondary-200: #fbc884;
+  --secondary-300: #f9b254;
+  --secondary-400: #f8a233;
+  --secondary-500: #f6931f;
+  --secondary-600: #f2881d;
+  --secondary-700: #eb781b;
+  --secondary-800: #e56919;
+  --secondary-900: #da5117;
+  --secondary-950: #c54008;
+
+  --bg: #eff3fb;
+
+  --textColor: #18181b;
+
+  --zinc-950: #09090b;
+  --zinc-900: #18181b;
+  --zinc-800: #27272a;
+  --zinc-700: #3f3f46;
+  --zinc-600: #52525b;
+  --zinc-500: #71717a;
+  --zinc-400: #a1a1aa;
+  --zinc-300: #d4d4d8;
+  --zinc-200: #e4e4e7;
+  --zinc-100: #f4f4f5;
+  --zinc-50: #fafafa;
+}
+
+html,
+body {
+  font-family: "Dana_regular";
+  direction: rtl;
+}
+::-webkit-scrollbar {
+  width: 10px !important;
+}
+::-webkit-scrollbar-track {
+  background: var(--primary-50);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-400);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-500);
+}
+
+/* @font-face{font-display:swap;font-family:'Dana_black';font-style:normal;src:url('../_fonts/dana-fanum-black.eot') format('embedded-opentype'),url(../_fonts/dana-fanum-black.woff) format('woff'),url(../_fonts/dana-fanum-black.woff2) format('woff2')}
+@font-face{font-display:swap;font-family:'Dana_bold';font-style:normal;src:url('../_fonts/dana-fanum-bold.eot') format('embedded-opentype'),url(../_fonts/dana-fanum-bold.woff) format('woff'),url(../_fonts/dana-fanum-bold.woff2) format('woff2')}
+@font-face{font-display:swap;font-family:'Dana_demibold';font-style:normal;src:url('../_fonts/dana-fanum-demibold.eot') format('embedded-opentype'),url(../_fonts/dana-fanum-demibold.woff) format('woff'),url(../_fonts/dana-fanum-demibold.woff2) format('woff2')}
+@font-face{font-display:swap;font-family:'Dana_extrabold';font-style:normal;src:url('../_fonts/dana-fanum-extrabold.eot') format('embedded-opentype'),url(../_fonts/dana-fanum-extrabold.woff) format('woff'),url(../_fonts/dana-fanum-extrabold.woff2) format('woff2')}
+@font-face{font-display:swap;font-family:'Dana_extralight';font-style:normal;src:url('../_fonts/dana-fanum-extralight.eot') format('embedded-opentype'),url(../_fonts/dana-fanum-extralight.woff) format('woff'),url(../_fonts/dana-fanum-extralight.woff2) format('woff2')}
+@font-face{font-display:swap;font-family:'Dana_light';font-style:normal;src:url('../_fonts/dana-fanum-light.eot') format('embedded-opentype'),url(../_fonts/dana-fanum-light.woff) format('woff'),url(../_fonts/dana-fanum-light.woff2) format('woff2')}
+@font-face{font-display:swap;font-family:'Dana_medium';font-style:normal;src:url('../_fonts/dana-fanum-medium.eot') format('embedded-opentype'),url(../_fonts/dana-fanum-medium.woff) format('woff'),url(../_fonts/dana-fanum-medium.woff2) format('woff2')}
+@font-face{font-display:swap;font-family:'Dana_regular';font-style:normal;src:url('../_fonts/dana-fanum-regular.eot') format('embedded-opentype'),url(../_fonts/dana-fanum-regular.woff) format('woff'),url(../_fonts/dana-fanum-regular.woff2) format('woff2')}
+@font-face{font-display:swap;font-family:'Dana_thin';font-style:normal;src:url('../_fonts/dana-fanum-thin.eot') format('embedded-opentype'),url(../_fonts/dana-fanum-thin.woff) format('woff'),url(../_fonts/dana-fanum-thin.woff2) format('woff2')}
+@font-face{font-display:swap;font-family:'Dana_ultrabold';font-style:normal;src:url('../_fonts/dana-fanum-ultrabold.eot') format('embedded-opentype'),url(../_fonts/dana-fanum-ultrabold.woff) format('woff'),url(../_fonts/dana-fanum-ultrabold.woff2) format('woff2')}
+@font-face{font-display:swap;font-family:'Dana_heavy';font-style:normal;src:url('../_fonts/Dana-Heavy.ttf') format('truetype'),url(../_fonts/Dana-Heavy.woff) format('woff'),url(../_fonts/Dana-Heavy.woff2) format('woff2')} */
+
+/* final */
+
+@font-face {
+  font-family: "Dana";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../_fonts/dana-fanum-regular.woff");
+}
+@font-face {
+  font-family: "Dana";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../_fonts/dana-fanum-medium.woff");
+}
+@font-face {
+  font-family: "Dana";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../_fonts/dana-fanum-bold.woff");
+}
+
+html,
+* {
+  font-family: "Dana", sans-serif !important;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Dana_black";
+  font-style: normal;
+  src: url(../_fonts/DanaFaNum-black.woff) format("woff"),
+    url(../_fonts/DanaFaNum-black.woff2) format("woff2"),
+    url(../_fonts/dana-fanum-black.eot) format("embedded-opentype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Dana_bold";
+  font-style: normal;
+  src: url(../_fonts/DanaFaNum-bold.woff) format("woff"),
+    url(../_fonts/DanaFaNum-bold.woff2) format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Dana_demibold";
+  font-style: normal;
+  src: url(../_fonts/DanaFaNum-demibold.woff) format("woff"),
+    url(../_fonts/DanaFaNum-demibold.woff2) format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Dana_extrabold";
+  font-style: normal;
+  src: url(../_fonts/DanaFaNum-extrabold.woff) format("woff"),
+    url(../_fonts/DanaFaNum-extrabold.woff2) format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Dana_extralight";
+  font-style: normal;
+  src: url(../_fonts/DanaFaNum-extralight.woff) format("woff"),
+    url(../_fonts/DanaFaNum-extralight.woff2) format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Dana_light";
+  font-style: normal;
+  src: url(../_fonts/DanaFaNum-light.woff) format("woff"),
+    url(../_fonts/DanaFaNum-light.woff2) format("woff2"),
+    url(../_fonts/dana-fanum-light.eot) format("embedded-opentype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Dana_medium";
+  font-style: normal;
+  src: url(../_fonts/DanaFaNum-medium.woff) format("woff"),
+    url(../_fonts/DanaFaNum-medium.woff2) format("woff2"),
+    url(../_fonts/dana-fanum-medium.eot) format("embedded-opentype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Dana_regular";
+  font-style: normal;
+  src: url(../_fonts/DanaFaNum-regular.woff) format("woff"),
+    url(../_fonts/DanaFaNum-regular.woff2) format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Dana_thin";
+  font-style: normal;
+  src: url(../_fonts/DanaFaNum-thin.woff) format("woff"),
+    url(../_fonts/DanaFaNum-thin.woff2) format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Dana_ultrabold";
+  font-style: normal;
+  src: url(../_fonts/DanaFaNum-ultrabold.woff) format("woff"),
+    url(../_fonts/DanaFaNum-ultrabold.woff2) format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "FontAwesome";
+  font-style: normal;
+  src: url(../_fonts/fontawesome-webfont.woff) format("woff"),
+    url(../_fonts/fontawesome-webfont.woff2) format("woff2"),
+    url(../_fonts/fontawesome-webfont.otf) format("opentype"),
+    url(../_fonts/fontawesome-webfont.ttf) format("typetrue");
+}
+.blur-header {
+  background-color: #ffffffc3;
+  backdrop-filter: blur(8px);
+  border-bottom: 1.5px solid white;
+  box-shadow: rgba(0, 0, 0, 0.058) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.033) 0px 2px 4px -1px;
+}
+.header-menu {
+  box-shadow: rgba(0, 0, 0, 0.619) 0px 15px 25px;
+}
+.fade-in-animation {
+  animation: fadeIn-1 1.6s ease forwards;
+}
+@keyframes fadeIn-1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/* From Uiverse.io by xXJollyHAKERXx */
+.spinner {
+  background-image: linear-gradient(#a90730 35%, rgb(0, 225, 255));
+  width: 70px;
+  height: 70px;
+  animation: spinning82341 1.7s linear infinite;
+  text-align: center;
+  border-radius: 50px;
+  filter: blur(1px);
+  box-shadow: 0px -5px 20px 0px #a90730, 0px 5px 20px 0px rgb(0, 225, 255);
+}
+
+.spinner1 {
+  background-color: rgb(255, 255, 255);
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  filter: blur(10px);
+}
+
+@keyframes spinning82341 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.bullet-line::after,
+.bullet-line::before {
+  content: "";
+  position: absolute;
+  background-color: var(--zinc-300);
+  width: 6px;
+  top: -3px;
+  height: 6px;
+  border-radius: 100%;
+}
+.bullet-line::after {
+  left: -1px;
+}
+.bullet-line::before {
+  right: -1px;
+}
+.scroll-to-searchbox:hover .airplane {
+  animation: 1.35s linear fly;
+  transform: translateX(-72px);
+}
+@keyframes fly {
+  from {
+    transform: translateX(69px);
+  }
+  to {
+    transform: translateX(-72px);
+  }
+}
+.scroll-to-searchbox:hover {
+  box-shadow: 1px 2px 10px 2px #a9072f2e;
+  border: 1px solid #a9072f2e;
+  transform: translateY(-10px) scale(1.02);
+}
+.typing-demo {
+  animation: fadeIn-2 2.84s ease forwards;
+}
+@keyframes fadeIn-2 {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animated-icon {
+  animation: 3s ease-in-out infinite alternate softAnime;
+  display: inline-block;
+  will-change: transform;
+}
+
+@keyframes softAnime {
+  0% {
+    transform: translateX(-8px) translateY(6px) rotate(-1deg) scale(1);
+    filter: brightness(0.97);
+  }
+  50% {
+    transform: translateX(0) translateY(-4px) rotate(1deg) scale(1.02);
+    filter: brightness(1.03);
+  }
+  100% {
+    transform: translateX(8px) translateY(6px) rotate(-1deg) scale(1);
+    filter: brightness(0.97);
+  }
+}
+.faq-box {
+  transition: background-color 0.3s ease;
+}
+
+.faq-box.active .question {
+  color: var(--primary-800) !important;
+}
+
+.faq-box .answer {
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+
+.faq-box .chevron {
+  transition: transform 0.35s ease;
+}
+.faq-box.active .chevron path {
+  fill: var(--primary-800) !important;
+}
