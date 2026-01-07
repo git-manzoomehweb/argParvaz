@@ -331,3 +331,7 @@ html,
 .faq-box.active .chevron path {
   fill: var(--primary-800) !important;
 }
+.articles-cats li.active{
+  background-color: var(--zinc-900) !important;
+  color: white !important;
+}
